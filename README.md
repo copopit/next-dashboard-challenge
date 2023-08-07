@@ -38,3 +38,10 @@ What import alias would you like configured? @/*
 - [ ] Add navigation links to the navbar. `Dashboard` must navigate to root page, and `Products` must navigate to the product page. See below image for reference. The navbar must be available on all pages.
       ![Alt text](assets/todo_3_1.png)
       ![Alt text](assets/todo_3_2.png)
+
+- [ ] Add a form for creating a new product, and show all products in a table on the homepage:
+  - [Install shadcn](https://ui.shadcn.com/docs/installation/next).
+  - Add the [form](https://ui.shadcn.com/docs/components/form#installation) and [data table](https://ui.shadcn.com/docs/components/data-table#installation) components.
+  - Use the components on the homepage so it looks like this:
+
+- [ ] 
