@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@planetscale/database": "^1.10.0",
     "@radix-ui/react-menubar": "^1.0.3",
+    "@radix-ui/react-slot": "^1.0.2",
     "@types/node": "20.4.8",
     "@types/react": "18.2.19",
     "@types/react-dom": "18.2.7",
@@ -30,7 +32,9 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
+    "@types/better-sqlite3": "^7.6.4",
     "better-sqlite3": "^8.5.0",
+    "dotenv": "^16.3.1",
     "drizzle-kit": "^0.19.12",
     "drizzle-orm": "^0.28.1"
   }

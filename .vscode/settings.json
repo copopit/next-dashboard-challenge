@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "productdb",
+            "database": "${workspaceFolder:next-dashboard-challenge}/next-dashboard-challenge/sqlite.db"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}

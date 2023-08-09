@@ -1,9 +1,19 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
+  '@planetscale/database':
+    specifier: ^1.10.0
+    version: 1.10.0
   '@radix-ui/react-menubar':
     specifier: ^1.0.3
     version: 1.0.3(@types/react-dom@18.2.7)(@types/react@18.2.19)(react-dom@18.2.0)(react@18.2.0)
+  '@radix-ui/react-slot':
+    specifier: ^1.0.2
+    version: 1.0.2(@types/react@18.2.19)(react@18.2.0)
   '@types/node':
     specifier: 20.4.8
     version: 20.4.8
@@ -60,15 +70,21 @@ dependencies:
     version: 5.1.6
 
 devDependencies:
+  '@types/better-sqlite3':
+    specifier: ^7.6.4
+    version: 7.6.4
   better-sqlite3:
     specifier: ^8.5.0
     version: 8.5.0
+  dotenv:
+    specifier: ^16.3.1
+    version: 16.3.1
   drizzle-kit:
     specifier: ^0.19.12
     version: 0.19.12
   drizzle-orm:
     specifier: ^0.28.1
-    version: 0.28.1(better-sqlite3@8.5.0)(postgres@3.3.5)
+    version: 0.28.1(@planetscale/database@1.10.0)(@types/better-sqlite3@7.6.4)(better-sqlite3@8.5.0)(postgres@3.3.5)
 
 packages:
 
@@ -742,6 +758,10 @@ packages:
       tslib: 2.6.1
     dev: false
 
+  /@planetscale/database@1.10.0:
+    resolution: {integrity: sha512-XMfNRjIPgGTga6g1YpGr7E21CcnHZcHZdyhRUIiZ/AlpD+ts65UF2B3wKjcu7MKMynmmcOGs6R9kAT6D1OTlZQ==}
+    engines: {node: '>=16'}
+
   /@radix-ui/primitive@1.0.1:
     resolution: {integrity: sha512-yQ8oGX2GVsEYMWGxcovu1uGWPCxV5BFfeeYxqPmuAzUyLT9qmaMXSAhXpb0WrspIeqYzdJpkh2vHModJPgRIaw==}
     dependencies:
@@ -1222,13 +1242,18 @@ packages:
       tslib: 2.6.1
     dev: false
 
+  /@types/better-sqlite3@7.6.4:
+    resolution: {integrity: sha512-dzrRZCYPXIXfSR1/surNbJ/grU3scTaygS0OMzjlGf71i9sc2fGyHPXXiXmEvNIoE0cGwsanEFMVJxPXmco9Eg==}
+    dependencies:
+      '@types/node': 20.4.8
+    dev: true
+
   /@types/json5@0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: false
 
   /@types/node@20.4.8:
     resolution: {integrity: sha512-0mHckf6D2DiIAzh8fM8f3HQCvMKDpK94YQ0DSVkfWTG9BZleYIWudw9cJxX8oCk9bM+vAkDyujDV6dmKHbvQpg==}
-    dev: false
 
   /@types/prop-types@15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
@@ -1854,6 +1879,11 @@ packages:
       esutils: 2.0.3
     dev: false
 
+  /dotenv@16.3.1:
+    resolution: {integrity: sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==}
+    engines: {node: '>=12'}
+    dev: true
+
   /dreamopt@0.8.0:
     resolution: {integrity: sha512-vyJTp8+mC+G+5dfgsY+r3ckxlz+QMX40VjPQsZc5gxVAxLmi64TBoVkP54A/pRAXMXsbu2GMMBrZPxNv23waMg==}
     engines: {node: '>=0.4.0'}
@@ -1881,7 +1911,7 @@ packages:
       - supports-color
     dev: true
 
-  /drizzle-orm@0.28.1(better-sqlite3@8.5.0)(postgres@3.3.5):
+  /drizzle-orm@0.28.1(@planetscale/database@1.10.0)(@types/better-sqlite3@7.6.4)(better-sqlite3@8.5.0)(postgres@3.3.5):
     resolution: {integrity: sha512-6ms2pVxvkBJtuP1BZTUCzLLkr+iK/cNgd+tCw+I5/PoM8PB9kXaYoW9yNe/cnaXb0TLJ1gDEndDIyQdRX7zCdQ==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
@@ -1943,6 +1973,8 @@ packages:
       sqlite3:
         optional: true
     dependencies:
+      '@planetscale/database': 1.10.0
+      '@types/better-sqlite3': 7.6.4
       better-sqlite3: 8.5.0
       postgres: 3.3.5
     dev: true
